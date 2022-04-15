@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class = "center">Register for an Account</h1>
+    
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p class = "center">
+            {{ form.username.label }}<br>
+            {{ form.username(class = 'textinput') }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: rgb(80, 0, 0);">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p class = "center">
+            {{ form.firstname.label }}<br>
+            {{ form.firstname(class = "textinput") }}<br>
+            {% for error in form.firstname.errors %}
+            <span style="color: rgb(80, 0, 0);">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p class = "center">
+            {{ form.lastname.label }}<br>
+            {{ form.lastname(class = "textinput") }}<br>
+            {% for error in form.lastname.errors %}
+            <span style="color: rgb(80, 0, 0);">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p class = "center">
+            {{ form.phone.label }}<br>
+            {{ form.phone(class = "textinput") }}<br>
+            {% for error in form.phone.errors %}
+            <span style="color: rgb(80, 0, 0);">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <h1 style="font-size: 12px;" class = "center">Password must have a special character, 
+            lowercase, uppercase, number and be at least 20 characters long!</h1>
+        <p class = "center">
+            {{ form.password.label }}<br>
+            {{ form.password(class = "textinput") }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: rgb(80, 0, 0);">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p class = "center">
+            {{ form.password2.label }}<br>
+            {{ form.password2(class = "textinput") }}<br>
+            {% for error in form.password2.errors %}
+            <span style="color: rgb(80, 0, 0);">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p class = "center">{{ form.submit(class="button") }}</p>
+    </form>
+
+
+
+
+
+{% endblock %}

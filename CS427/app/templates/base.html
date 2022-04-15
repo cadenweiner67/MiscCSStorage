@@ -1,0 +1,36 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+
+    <body>
+        <div class ="nav-container">
+        <table class = "center">
+            <tr>
+                {%if current_user%}
+                    {%if current_user.is_authenticated == true %}
+                    <td><a href="{{ url_for('logout') }}" class = "button"> Logout </a></td>
+                    {%elif current_user.is_authenticated == false%}
+                    <td><a href="{{ url_for('login') }}" class = "button"> Login </a></td>
+                    {%endif%}
+                    <td><a style = "color: white;">User: {{current_user.username}}</a></td>
+                {%endif%}
+              
+            </tr>
+        </table>
+        </div>
+
+        <div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <div class = flash-container>{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            {% block content %} {% endblock %}
+        </div>
+
+    </body>
+</html>

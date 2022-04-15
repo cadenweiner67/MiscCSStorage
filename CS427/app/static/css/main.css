@@ -1,0 +1,83 @@
+.nav-container {
+    background: #1e3098;
+    font-family: Tahoma;
+    font-size: 12px;
+    color: #1e3098; 
+    height: 32px;
+    text-transform: uppercase;
+}
+a:hover {
+    color:#2387D9;
+}
+
+.button {
+    width : 180px;
+    padding : 1px;    
+    font-size: 20px;
+    margin: 3px;
+    padding: 2px;
+    background-color: #1e3098;
+    color: white; 
+    border:2px solid white;
+}
+.button:hover {
+    background-color: 157dd3;
+    color: white;
+}
+
+.flash-container {
+    background-color:#981E32;
+    color: black;
+    width : 100%;
+    font-weight: bold;
+    padding : 5px;    
+    font-size: 16px;
+    margin : 5px;
+    height: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.textinput{
+    color: Black;
+    width : 50%;
+    font-size: 16px;
+    padding : .1%; 
+    margin : .1%;
+    height : 5%; 
+    border: 2px solid #1e3098;
+    border-radius: 4px;
+    background-color:ghostwhite;
+}
+.formbody{
+    color: Black;
+    width : 50%;
+    font-size: 16px;
+    padding : .1%; 
+    margin : .1%;
+    height : 15%; 
+    border: 2px solid #1e3098;
+    border-radius: 4px;
+    background-color:ghostwhite;
+}
+.formselect{
+    color: Black;
+    width : 25%;
+    font-size: 16px;
+    padding : .1%; 
+    margin : .1%;
+    height : 5%; 
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color:ghostwhite;
+}   
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+
+
